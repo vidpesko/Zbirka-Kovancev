@@ -1,0 +1,51 @@
+{% extends 'main.html' %}
+{% load static %}
+<head>
+  <link rel="stylesheet" href="{% static 'styles/Teme.css' %}" media="screen">
+</head>
+{% block content %}
+<body class="u-body u-xxl-mode" data-lang="en" >
+    <section style="min-height: 90vh;" class="u-align-center u-clearfix u-custom-color-9 u-section-1" id="sec-063e">
+      <div class="u-clearfix u-sheet u-valign-middle-xxl u-sheet-1">
+        <div class="u-clearfix u-expanded-width u-gutter-0 u-layout-wrap u-layout-wrap-1">
+          <div class="u-layout" style="">
+            <div class="u-layout-row" style="">
+              <div class="u-align-center u-container-style u-layout-cell u-left-cell u-shape-rectangle u-size-60 u-size-xs-60 u-layout-cell-1" src="">
+                <div class="u-container-layout u-container-layout-1" src="">
+                  <div class="u-container-style u-expanded-width u-group u-radius-35 u-shape-round u-white u-group-1">
+                    <div class="u-container-layout u-container-layout-2">
+                      <h2 class="u-align-center u-text u-text-1">Teme</h2>
+                      <div class="u-align-center-lg u-align-center-md u-align-center-sm u-align-center-xs u-form u-form-1">
+                        <form action="//publish.nicepage.com/Form/Process" method="POST" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" source="email" name="form" style="padding: 10px;">
+                          <div class="u-form-group u-form-name u-label-none">
+                            <label for="name-47cb" class="u-custom-font u-font-arial u-label">Isci</label>
+                            <input type="text" placeholder="Vnesite ime teme" id="name-47cb" name="name" class="u-border-2 u-border-black u-input u-input-rectangle u-radius-6 u-white u-input-1" required="">
+                          </div>
+                          <div class="u-form-send-message u-form-send-success"> Thank you! Your message has been sent. </div>
+                          <div class="u-form-send-error u-form-send-message"> Unable to send your message. Please fix errors then try again. </div>
+                          <input type="hidden" value="" name="recaptchaResponse">
+                          <input type="hidden" name="formServices" value="37002d0c702a755cf735ed0e262f8e4b">
+                        </form>
+                      </div>
+                      <div class="u-align-center-lg u-align-center-md u-align-center-sm u-align-center-xs u-list u-list-1">
+                        <div class="u-repeater u-repeater-1">
+                          {% for topic in topics %}
+                          <div class="u-container-style u-list-item u-palette-2-light-2 u-radius-18 u-repeater-item u-shape-round u-list-item-1">
+                            <div class="u-container-layout u-similar-container u-container-layout-3">
+                              <h4 class="u-text u-text-2">{{topic.name}}</h4>
+                            </div>
+                          </div>
+                          {% endfor %}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+</body>
+{% endblock %}

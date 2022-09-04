@@ -7,7 +7,6 @@ from django.contrib.auth.models import User
 def home(request):
     # TOPICS
     topics = Topic.objects.all()
-
     # NUMBERS
     num_of_users = len(User.objects.all())
     average_size = 12
@@ -22,3 +21,9 @@ def home(request):
 
     context = {'topics':topics, 'stats':statistics}
     return render(request, 'home/Domov.html', context)
+
+def topics(request):
+    topics = Topic.objects.all()
+
+    context = {'topics':topics}
+    return render(request, 'home/Teme.html', context)

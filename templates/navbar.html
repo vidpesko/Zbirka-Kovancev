@@ -46,6 +46,9 @@ html, body {
   .menu > li:hover {
   outline: 2px solid white;
 }
+  .menu > li.active-site {
+    outline: 2px solid white;
+  }
 }
 @media (max-width: 700px){
   .menu > li:hover {
@@ -211,10 +214,10 @@ html, body {
             <div class='menu-button'></div>
           </label>
             <ul class="menu" id="menu-id">
-              <li>DOMOV</li>
-              <li>RAZISCI</li>
-              <li>MOJA ZBIRKA</li>
-              <li>DODAJ KOVANEC</li>
+              <li {% if request.path == '/' %}class="active-site"{% endif %}>DOMOV</li>
+              <li {% if request.path == '/odkrij/' %}class="active-site"{% endif %}>RAZISCI</li>
+              <li {% if request.path == '/moja-zbirka/' %}class="active-site"{% endif %}>MOJA ZBIRKA</li>
+              <li {% if request.path == '/dodaj-kovanec/' %}class="active-site"{% endif %}>DODAJ KOVANEC</li>
 
             </ul>
             <div class="search">
