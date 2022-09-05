@@ -1,9 +1,6 @@
 {% extends "main.html" %}
 {% load static %}
 
-<head>
-  <link rel="stylesheet" href="{% static 'styles/Domov.css' %}" media="screen">
-</head>
 {% block content %}
 <body class="u-body u-xxl-mode" data-lang="en">
     <!-- ! Landing Section -->
@@ -226,7 +223,7 @@ text-align: center;">Odkrijte svet numizmatike z tematskimi, interaktivnimi zgod
               </span>
             </a>
           </div>
-          <a href="https://nicepage.com/k/retro-website-templates" class="u-border-2 u-border-palette-2-base u-btn u-btn-round u-button-style u-custom-font u-hover-palette-2-dark-1 u-palette-2-base u-radius-10 u-text-body-alt-color u-btn-1">
+          <a href="{% url 'topics' %}" class="u-border-2 u-border-palette-2-base u-btn u-btn-round u-button-style u-custom-font u-hover-palette-2-dark-1 u-palette-2-base u-radius-10 u-text-body-alt-color u-btn-1">
             <span style="font-size: 1rem;">Oglejte si vse teme</span><span class="u-icon u-text-white u-icon-1"><svg class="u-svg-content" viewBox="0 0 512 512" x="0px" y="0px" style="width: 1em; height: 1em;"><path d="M441.156,322.876l-48.666-47.386c-3.319-3.243-8.619-3.234-11.93,0.017l-81.894,80.299V8.533 c0-4.71-3.823-8.533-8.533-8.533h-68.267c-4.71,0-8.533,3.823-8.533,8.533v347.273l-81.894-80.299    c-3.311-3.243-8.602-3.251-11.921-0.017l-48.666,47.386c-1.655,1.604-2.586,3.806-2.586,6.11c0,2.304,0.939,4.506,2.586,6.11 l179.2,174.481c1.655,1.613,3.806,2.423,5.948,2.423c2.15,0,4.292-0.811,5.956-2.423l179.2-174.481 c1.647-1.604,2.577-3.806,2.577-6.11C443.733,326.682,442.803,324.48,441.156,322.876z"></path></svg><img></span>
           </a>
         </div>
@@ -234,7 +231,7 @@ text-align: center;">Odkrijte svet numizmatike z tematskimi, interaktivnimi zgod
     <!-- ! Statistics -->
     <section class="u-clearfix u-custom-color-5 u-section-6" id="carousel_0008" style="overflow: hidden;">
       <div class="u-clearfix u-sheet u-sheet-1">
-        <h2 class="u-text u-text-1">Statistika</h2>
+        <h2 class="u-text u-text-1" style="z-index: 10; text-align: left;">Statistika</h2>
         <div class="u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
           <div class="u-layout">
             <div class="u-layout-row">
