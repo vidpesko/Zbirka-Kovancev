@@ -23,6 +23,9 @@
                 link.href = "{% static 'styles/Domov.css' %}";
             } else if (path == '/teme/') {
                 link.href = "{% static 'styles/Teme.css' %}";
+            } else if (path == '/odkrij/') {
+                console.log('hello')
+                link.href = "{% static 'styles/Razisci.css' %}";
             }
             link.type = "text/css";
             link.rel = "stylesheet";
